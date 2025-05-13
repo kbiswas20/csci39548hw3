@@ -3,10 +3,11 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
+  base: '/', // Ensure you're deploying to root
   css: {
     postcss: {
       plugins: [
-        require('@tailwindcss/postcss')(),
+        require('tailwindcss')(),
         require('autoprefixer')(),
       ],
     },
